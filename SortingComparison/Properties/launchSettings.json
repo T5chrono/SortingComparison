@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "SortingComparison": {
+      "commandName": "Project",
+      "commandLineArgs": "sorted_one_thousand sorted_ten_thousand sorted_fifty_thousand sorted_one_hundred_thousand sorted_five_hundret_thousand sorted_one_million sorted_three_millions"
+    }
+  }
+}
