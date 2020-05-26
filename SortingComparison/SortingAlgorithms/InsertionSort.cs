@@ -6,12 +6,7 @@ namespace SortingComparison
 {
     class InsertionSort : ISorter
     {
-        public NumberProvider NumberProvider { get; private set; }
-        
-        public InsertionSort(NumberProvider numberProvider)
-        {
-            NumberProvider = numberProvider;
-        }
+        public string SortAlgorithmName { get; set; } = "Insertion Sort";
 
         public BigInteger Sort(int[] numbers)
         {
