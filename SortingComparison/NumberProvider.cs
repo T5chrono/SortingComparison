@@ -7,26 +7,26 @@ namespace SortingComparison
 {
     public class NumberProvider
     {
-        List<string> ShuffledFilePaths = new List<string>()
+        public List<string> ShuffledFilePaths = new List<string>()
             {
                 "one_thousand.txt",
                 "ten_thousand.txt",
-                "fifty_thousand.txt",
-                "one_hundred_thousand.txt",
-                "five_hundret_thousand.txt",
-                "one_million.txt",
-                "three_millions.txt",
+                //"fifty_thousand.txt",
+                //"one_hundred_thousand.txt",
+                //"five_hundret_thousand.txt",
+                //"one_million.txt",
+                //"three_millions.txt",
             };
 
-        List<string> SortedFilePaths = new List<string>()
+        public List<string> SortedFilePaths = new List<string>()
             {
                 "sorted_one_thousand.txt",
                 "sorted_ten_thousand.txt",
-                "sorted_fifty_thousand.txt",
-                "sorted_one_hundred_thousand.txt",
-                "sorted_five_hundret_thousand.txt",
-                "sorted_one_million.txt",
-                "sorted_three_millions.txt",
+                //"sorted_fifty_thousand.txt",
+                //"sorted_one_hundred_thousand.txt",
+                //"sorted_five_hundret_thousand.txt",
+                //"sorted_one_million.txt",
+                //"sorted_three_millions.txt",
             };
 
         public List<List<int>> ListsOfUnorderedNumbers { get; private set; } = new List<List<int>>();
@@ -79,7 +79,7 @@ namespace SortingComparison
                     allNumbers.Add(Convert.ToInt32(line));
                 }
             }
-            Console.WriteLine("File loaded");
+            Console.WriteLine($"File {fileName} loaded");
             return allNumbers;
         }
     }
