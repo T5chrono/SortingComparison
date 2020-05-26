@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace SortingComparison
 {
@@ -8,6 +9,7 @@ namespace SortingComparison
         {
             List<ISorter> SortingAlgorithms = new List<ISorter>()
             {
+                new BubbleSort(),
                 new InsertionSort(),
             };
 
@@ -15,6 +17,13 @@ namespace SortingComparison
             
             SortingController.ComputeSortAlgorithmsStatistics();
         }
-
+        private static NumberProvider LoadNumbersFromFile()
+        {
+            Console.WriteLine("Hello in Sorting Comparison");
+            NumberProvider NumberProvider = new NumberProvider();
+            Console.WriteLine("Completed Loading Files");
+            Console.WriteLine(Environment.NewLine);
+            return NumberProvider;
+        }
     }
 }
