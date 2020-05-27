@@ -7,7 +7,7 @@ namespace SortingComparison
     {
         NumberProvider NumberProvider { get; set; }
         public string SortAlgorithmName { get; set; }
-        BigInteger Sort(int[] numbers);
-        BigInteger Sort(List<int> numbers);
+        BigInteger Sort(int[] numbers, int start=0, int end=0);
+        BigInteger Sort(List<int> numbers, int start = 0, int end = 0);
     }
 }
