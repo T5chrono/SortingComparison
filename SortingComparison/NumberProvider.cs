@@ -63,6 +63,17 @@ namespace SortingComparison
             }
         }
 
+        public NumberProvider(NumberProvider originalNumberProvider)
+        {
+            ListsOfUnorderedNumbers = ObjectCopier.Clone(originalNumberProvider.ListsOfUnorderedNumbers);
+            ArraysOfUnorderedNumbers = ObjectCopier.Clone(originalNumberProvider.ArraysOfUnorderedNumbers);
+            LinkedListsOfUnorderedNumbers = ObjectCopier.Clone(originalNumberProvider.LinkedListsOfUnorderedNumbers);
+
+            ListsOfOrderedNumbers = ObjectCopier.Clone(originalNumberProvider.ListsOfOrderedNumbers);
+            ArraysOfOrderedNumbers = ObjectCopier.Clone(originalNumberProvider.ArraysOfOrderedNumbers);
+            LinkedListsOfOrderedNumbers = ObjectCopier.Clone(originalNumberProvider.LinkedListsOfOrderedNumbers);
+        }
+
         private List<int> GetListOfNumbers(string fileName)
         {
             string path = Path.Combine(Environment.CurrentDirectory, $@"..\..\..\Resources\", fileName);
