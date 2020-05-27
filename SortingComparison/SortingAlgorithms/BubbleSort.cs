@@ -18,7 +18,7 @@ namespace SortingComparison
             this.NumberProvider = new NumberProvider(originalNumberProvider);
         }
         
-        public BigInteger Sort(int[] numbers)
+        public BigInteger Sort(int[] numbers, int start = 0, int end = 0)
         {
             BigInteger totalNumberOfComparisons = 0;
 
@@ -40,7 +40,7 @@ namespace SortingComparison
             return totalNumberOfComparisons;
         }  
 
-        public BigInteger Sort(List<int> numbers)
+        public BigInteger Sort(List<int> numbers, int start = 0, int end = 0)
         {
             BigInteger totalNumberOfComparisons = 0;
 
