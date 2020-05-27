@@ -13,6 +13,10 @@ namespace SortingComparison
         {
             NumberProvider = new NumberProvider();
         }
+        public BubbleSort(NumberProvider originalNumberProvider)
+        {
+            this.NumberProvider = new NumberProvider(originalNumberProvider);
+        }
         
         public BigInteger Sort(int[] numbers)
         {

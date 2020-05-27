@@ -12,10 +12,14 @@ namespace SortingComparison
         {
             NumberProvider = new NumberProvider();
         }
+        public InsertionSort(NumberProvider originalNumberProvider)
+        {
+            this.NumberProvider = new NumberProvider(originalNumberProvider);
+        }
 
         public BigInteger Sort(int[] numbers)
         {
-            BigInteger totalNumberOfComparisons = 1;
+            BigInteger totalNumberOfComparisons = 0;
 
             int n = numbers.Length;
             for (int i = 1; i < n; ++i)
@@ -36,7 +40,7 @@ namespace SortingComparison
 
         public BigInteger Sort(List<int> numbers)
         {
-            BigInteger totalNumberOfComparisons = 1;
+            BigInteger totalNumberOfComparisons = 0;
 
             int n = numbers.Count;
             for (int i = 1; i < n; ++i)
