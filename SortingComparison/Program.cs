@@ -7,10 +7,12 @@ namespace SortingComparison
     {
         static void Main(string[] args)
         {
+            NumberProvider originalNumberProvider = LoadNumbersFromFile();
+
             List<ISorter> SortingAlgorithms = new List<ISorter>()
             {
-                new BubbleSort(),
-                new InsertionSort(),
+                new BubbleSort(originalNumberProvider),
+                new InsertionSort(originalNumberProvider),
             };
 
             SortingController SortingController = new SortingController(SortingAlgorithms);
