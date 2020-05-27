@@ -13,9 +13,16 @@ namespace SortingComparison
             {
                 new BubbleSort(originalNumberProvider),
                 new InsertionSort(originalNumberProvider),
+                new QuickSort(originalNumberProvider),
+                new MergeSort(originalNumberProvider),
+                new SelectionSort(originalNumberProvider),
             };
 
             SortingController SortingController = new SortingController(SortingAlgorithms);
+
+           //Console.WriteLine("Test");
+           //SortingAlgorithms[4].Sort(originalNumberProvider.ArraysOfUnorderedNumbers[1]);
+           //Console.WriteLine("End test");
             
             SortingController.ComputeSortAlgorithmsStatistics();
         }
